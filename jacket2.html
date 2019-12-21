@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color: lightslategray;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" style="background-color: #e3f2fd; height: 10%;">
+        <a class="navbar-brand text-light" href="index.html">E-Commerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="approach.html">Approach <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="row col-md-12" style="margin-top: 10%; margin-bottom: 5%;"> 
+        <div class="col-md-1"></div>
+        <div class="card col-md-6" style="background-color: #e3f2fd;height: 80%;" >
+            <h2 class="card-title text-secondary" style="margin-left: 35%;">Time Remaining</h2>
+            <canvas id="canvas" style="width: 50%; height: 50%;margin-left: 40%;">
+            </canvas>
+            <div class="card-text" style="margin-left: 32%; margin-top: 10%;">
+                <h1 class="text-danger col-md" id="timer"></h1>
+            </div>
+            <input type="number" id="bid" style="margin-left: 20%; width: 60%; margin-top: 5%;" class="form-control" placeholder="Place Your Bid">
+            <button type="submit" onclick="showAlert()" class="btn btn-primary" style="width: 20%; margin-left: 40%; margin-top: 5%; margin-bottom: 10%;">Submit</button>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="card col-md-3" style="width: 60%;">
+            <div class="">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRO7PqoRbqoTGBscDwKhdY5YDZ_VwqbmMAXAOi_ibUWja8p3rg5" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Coat</h5>
+                <p class="card-text">This 1 button slim lapel super slim fit jacket is made with the perfect blend of terry and rayon. That makes it comfortable & stylish at the same time. The jet white color is perfect to carry your evenings in epic style! </p>
+                    <div class="row">
+                        <p class="col-md-6">Min. Price $150</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="clock.js"></script>
+    <script>
+        function showAlert() {
+            var bid = document.getElementById("bid").value
+            // console.log(bid);
+            if(bid == "")
+            {
+                alert("Please, place a bid.")
+            }
+            else if(bid <= 150)
+            {
+                alert("Please, place a bid more than min. Price: $150");
+            }
+            else{
+                alert("Your Bid is Placed")
+            }
+        }
+    </script>
+</body>
+</html>
